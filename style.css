@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background: #1a3a5c;
+  background: #2e7d4f;
   color: white;
   padding: 1.5rem 2rem;
   display: flex;
@@ -28,7 +28,7 @@ header h1 {
 }
 
 nav a {
-  color: #cce0f5;
+  color: #c8f0d8;
   text-decoration: none;
   margin-left: 1.5rem;
   font-family: Arial, sans-serif;
@@ -53,9 +53,9 @@ section {
 
 h2 {
   font-size: 1.4rem;
-  color: #1a3a5c;
+  color: #2e7d4f;
   margin-bottom: 0.75rem;
-  border-bottom: 2px solid #d0e4f7;
+  border-bottom: 2px solid #a8dfc0;
   padding-bottom: 0.4rem;
 }
 
@@ -72,7 +72,7 @@ p {
 
 .btn {
   display: inline-block;
-  background: #1a3a5c;
+  background: #2e7d4f;
   color: white;
   text-decoration: none;
   padding: 0.65rem 1.4rem;
@@ -83,7 +83,7 @@ p {
 }
 
 .btn:hover {
-  background: #2a5a8c;
+  background: #3da366;
 }
 
 footer {
@@ -103,7 +103,7 @@ table {
 }
 
 th {
-  background: #1a3a5c;
+  background: #2e7d4f;
   color: white;
   padding: 0.6rem 1rem;
   text-align: left;
@@ -117,4 +117,23 @@ td {
 
 tr:last-child td {
   border-bottom: none;
+}
+
+
+/* Page slide transition overlay */
+#page-overlay {
+  position: fixed;
+  inset: 0;
+  background: #2e7d4f;
+  z-index: 9999;
+  transform: translateX(0);
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+#page-overlay.slide-out {
+  transform: translateX(100%);
+}
+
+#page-overlay.slide-in {
+  transform: translateX(-100%);
 }
